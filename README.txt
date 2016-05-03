@@ -1,4 +1,4 @@
-# Tanks
+Tanks
 
 To Compile and Run:
     "ant run"
@@ -7,7 +7,7 @@ To View Javadoc:
     "ant javadoc"
 
 
-# On The Main Menu
+On The Main Menu
 
 To Play:
     press "Play" 
@@ -18,7 +18,8 @@ To View Credits:
 To View How To Play:
   press "How To Play"
 
-# Instructions
+
+Instructions
 
 This is a 2 player turn based action game.
 The players trade turns firing cannons at each other.
@@ -38,7 +39,9 @@ Both Players:
     "," ( < )                 -- increase the power of the shot.
     "." ( > )                 -- decrease the power of the shot.
 
-# Credit
+
+Credit
+
 Benjamin Hartl
 Colin Biafore
 Nick Abrahan
