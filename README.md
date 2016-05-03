@@ -18,6 +18,7 @@ To View Credits:
 To View How To Play:
   press "How To Play"
 
+# Instructions
 
 This is a 2 player turn based action game.
 The players trade turns firing cannons at each other.
