@@ -38,7 +38,7 @@ Both Players:
     "." ( > )                 -- decrease the power of the shot.
 
 # Credit
-Benjamin Hartl
-Colin Biafore
-Nick Abrahan
+Benjamin Hartl,
+Colin Biafore,
+Nick Abrahan,
 Bryce Bowers
