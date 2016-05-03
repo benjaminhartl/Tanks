@@ -1,13 +1,5 @@
 # Tanks
 
-Tanks
-=========================================
-Benjamin Hartl
-Colin Biafore
-Nick Abrahan
-Bryce Bowers
-==========================================
-
 To Compile and Run:
     "ant run"
 
@@ -44,3 +36,9 @@ Player 2: (on the right)
 Both Players:
     "," ( < )                 -- increase the power of the shot.
     "." ( > )                 -- decrease the power of the shot.
+
+# Credit
+Benjamin Hartl
+Colin Biafore
+Nick Abrahan
+Bryce Bowers
