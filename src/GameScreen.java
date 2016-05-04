@@ -21,7 +21,7 @@ public class GameScreen implements KeyListener{
     static int maxX = 700;             // max frame x
     static int maxY = 600;             // max frame y
 
-    static final int startYCord = 450; // where to place the tanks
+    static final int startYCord = 400; // where to place the tanks
     
     // player on the right is player 2
     public boolean rightTurn = false;        // determines whose turn
@@ -36,6 +36,7 @@ public class GameScreen implements KeyListener{
 
     static double time = 0;
     public boolean inAir = false;
+    public double timeIncrement = .01;
     public MyDrawPanel mdp;
     
     public Graphics doublebufferG;
@@ -86,13 +87,17 @@ public class GameScreen implements KeyListener{
 
     public void setUpPlayerKeys()
     {
-	p1.setCodes( KeyEvent.VK_W, KeyEvent.VK_S, 
-		     KeyEvent.VK_A, KeyEvent.VK_D, 
-		     KeyEvent.VK_SPACE );
+	p1.setCodes( KeyEvent.VK_W, 
+		KeyEvent.VK_S, 
+		KeyEvent.VK_A,
+		KeyEvent.VK_D, 
+		KeyEvent.VK_SPACE );
 
-	p2.setCodes( KeyEvent.VK_UP,   KeyEvent.VK_DOWN, 
-		     KeyEvent.VK_LEFT, KeyEvent.VK_RIGHT, 
-		     KeyEvent.VK_ENTER );
+	p2.setCodes( KeyEvent.VK_UP,
+		KeyEvent.VK_DOWN, 
+		KeyEvent.VK_LEFT,
+		KeyEvent.VK_RIGHT, 
+		KeyEvent.VK_ENTER );
     }
 
     /**
@@ -108,7 +113,7 @@ public class GameScreen implements KeyListener{
 	    else if( cc == 1 )
 		backImage = ImageIO.read(new File("./levSelResources/level_02.jpg"));
 	    else
-		backImage = ImageIO.read(new File("./levSelResources/bikini_bottom.jpg"));
+		backImage = ImageIO.read(new File("./levSelResources/level_03.jpg"));
 	}catch(IOException ioe){
 	    ioe.printStackTrace();
 	}
@@ -126,12 +131,15 @@ public class GameScreen implements KeyListener{
 	int code = e.getKeyCode();       // Get the keyCode that was typed
 	boolean fire;
 	Player tmpP;
+
 	if( time != 0 )
 	    return;
+	
 	if( rightTurn == true )                // Check if p2's turn
 	    tmpP = p2;
 	else 
 	    tmpP = p1;
+	
 	p1.hit = false;
 	p2.hit = false;
 	fire = tmpP.checkCodes( code );
@@ -195,7 +203,7 @@ public class GameScreen implements KeyListener{
 			shoot.setNewX( 50 );
 			inAir = false;
 		    }
-		if( shoot.getTheY() > startYCord + 10 )
+		if( shoot.getTheY() > startYCord + p1.size * 2 )
 		    {
 			shoot.setNewY( 50 );
 			inAir = false;
@@ -246,7 +254,7 @@ public class GameScreen implements KeyListener{
 		    shoot.setNewX( time );
 		    shoot.setNewY( time );
 		    shoot.draw( g );
-		    time = time + .01;
+		    time = time + timeIncrement;
 		}
 	    else 
 		{

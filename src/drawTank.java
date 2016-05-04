@@ -14,7 +14,7 @@ public class drawTank extends JPanel implements ActionListener {
     private Color c;
     public int xCord = 100;
     public int yCord = 150;
-    public int radius = 30;
+    public int radius = 50;
     private JRadioButton black;
     private JRadioButton blue;
     private JRadioButton green;
@@ -88,16 +88,16 @@ public class drawTank extends JPanel implements ActionListener {
 	    this.setTheColor( Color.BLACK );
 	
 	if(e.getSource() == blue) 
-	    this.setTheColor( Color.BLUE );
+	    this.setTheColor( new Color( 0, 0, 204 ) );
 	
 	if(e.getSource() == green) 
-	    this.setTheColor( Color.GREEN );
+	    this.setTheColor( new Color( 0, 102, 0 ) );
 	
 	if(e.getSource() == yellow) 
 	    this.setTheColor( Color.YELLOW );
 	
 	if(e.getSource() == red) 
-	    this.setTheColor( Color.RED );
+	    this.setTheColor( new Color( 204, 0, 0 ) );
 	
 	this.repaint();			
     }

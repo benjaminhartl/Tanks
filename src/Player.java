@@ -13,11 +13,12 @@ import java.io.IOException;
 public class Player{
 
     // Pre Determined Variables
-    public  int size     = 5;               // size of tank
+    public  int size     = 10;              // size of tank, scales up
     private int degree   = 90;              // angle of cannon
-    private int fuel     = 30;              // amount of fuel left
+    private int fuel     = 80;              // amount of fuel left
+    private int refuel   = 40;
     private int health   = 3;               // how much health left 
-    private int velocity = 16;              // velocity of each shot
+    private int velocity = 50;              // velocity of each shot
     
     // Initialized by the constructor
     private Color  color = null;            // tank color
@@ -36,7 +37,6 @@ public class Player{
     private int fireKey  = 0;
 
     public boolean hit  = false;
-
 
     //Sound Effects
     playMusic launchSound = null;
@@ -66,9 +66,9 @@ public class Player{
     {
 	if( hit == false )
 	    {
-		if( ( projectileX > ( x - 10 ) ) && ( projectileX < ( x + 10 ) ) )
+		if( ( projectileX > ( x - 2 * size ) ) && ( projectileX < ( x + 2 * size ) ) )
 		    {
-			if( ( projectileY > y ) && ( projectileY < ( y + 15 ) ) )
+			if( ( projectileY > y ) && ( projectileY < ( y + 3 * size ) ) )
 			    {
 				loseHealth();
 				hit = true;
@@ -108,7 +108,7 @@ public class Player{
        refuels players tank with 5 units of fuel
      */
 
-    public void reFuel()          { fuel += 5; }
+    public void reFuel()          { fuel += refuel; }
 
     /**
        burns fuel when player moves their tank 

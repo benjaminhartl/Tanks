@@ -114,7 +114,7 @@ public class enviroMenu implements ActionListener{
 	align_2.add(Box.createRigidArea(new Dimension(5,5)));
 
 	try {
-	    align_3 = new menuBackground("./levSelResources/bikini_bottom.jpg");
+	    align_3 = new menuBackground("./levSelResources/level_03.jpg");
 	align_3.setLayout(new BoxLayout(align_1, BoxLayout.LINE_AXIS));
 	}catch(IOException e){
 	    System.out.println("ERROR");
