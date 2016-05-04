@@ -22,15 +22,15 @@ public class MainMenu{
 
     public MainMenu()
     {
-	jf = new JFrame("Tanks!");
-	setUpBackgroundImage( "./levSelResources/mainPic.jpg" );
-	
-	addMainButtonPanel();
+		jf = new JFrame("Tanks!");
+		setUpBackgroundImage( "./levSelResources/mainPic.jpg" );
+		
+		addMainButtonPanel();
 
-	jf.setSize(541, 500);
-	jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	jf.setVisible(true);
-	BGM.startMusic();
+		jf.setSize(541, 500);
+		jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		jf.setVisible(true);
+		BGM.startMusic();
     }
     
     // adds Tanks background
@@ -50,19 +50,19 @@ public class MainMenu{
 
 	// play button
 	JButton playBtn = new JButton( "Play!" );
-	mainButtonPanel.add(playBtn);
+	mainButtonPanel.add( playBtn );
 	playBtn.setFocusable( false );
 	playBtn.addActionListener( new PlayGameListener() );
 	
 	// how to play button
 	JButton htpBtn = new JButton( "How to Play!" );
-	mainButtonPanel.add(htpBtn);
+	mainButtonPanel.add( htpBtn );
 	htpBtn.setFocusable( false );
 	htpBtn.addActionListener( new HowToPlayListener() );
 	
 	// credits button
 	JButton credBtn = new JButton( "Credits!" );
-	mainButtonPanel.add(credBtn);
+	mainButtonPanel.add( credBtn );
 	credBtn.setFocusable( false );
 	credBtn.addActionListener( new CreditsListener() );
 
@@ -75,12 +75,12 @@ public class MainMenu{
 	    if( playMenu == null )
 		{
 		playMenu = new PlayMenu();
-		jf.dispose();
+		// jf.dispose();
 		}
 	    else
 		{
 		playMenu.setToVisible();
-		jf.dispose();
+		// jf.dispose();
 		}
 	}
     }

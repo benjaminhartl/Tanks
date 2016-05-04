@@ -20,7 +20,7 @@ public class HowToPlayMenu{
 
     public JLabel jlCreators = new JLabel("**   CONTROLS   **", JLabel.CENTER);
 
-    public JLabel jlFlow1 = new JLabel("MOVE THE TANK. Player 1: a and d keys, Player 2: left and right arrow keys", JLabel.CENTER);
+    public JLabel jlFlow1 = new JLabel("MOVE THE TANK.\n Player 1: a and d keys, Player 2: left and right arrow keys", JLabel.CENTER);
     public JLabel jlFlow2 = new JLabel("ADJUST ANGLE OF CANNON. Player 1: w and s keys, Player 2: up and down arrow keys", JLabel.CENTER);
     public JLabel jlFlow3 = new JLabel("ADJUST VELOCITY OF CANNON BALL. Both Players: , and . keys", JLabel.CENTER);
     public JLabel jlFlow4 = new JLabel("FIRE THE PROJECTILE. Player 1: space bar, Player 2: Enter", JLabel.CENTER);
